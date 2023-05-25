@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #bad5ff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slice {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+.slice1 {
+  background-image: url('imgs/org.png');
+  background-position: left;
+  width: 33%;
+  height: 100%;
+  border: 2px solid #034f84;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+.slice2 {
+  background-image: url('imgs/brain.png');
+  background-position: center;
+  width: 33%;
+  height: 100%;
+  border: 2px solid #034f84;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+.slice3 {
+  background-image: url('imgs/book.png');
+  background-position: right;
+  width: 33%;
+  height: 100%;
+  border: 2px solid #034f84;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+.full-width-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.full-width-image img {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  height: 100%;
+  filter: brightness(100%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.image-caption {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #fff;
+}
+
+.image-caption h3 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+
+.image-caption p {
+  margin-bottom: 10px;
+}
+
+.image-caption .highlight {
+  color: #ffcc00;
+}
+
+.image-caption span {
+  font-size: 80px;
+}
+
+.image-caption span.highlight {
+  color: #f0f0f0;
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.image-caption span.highlights {
+  color: #f0f0f0;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+header {
+  background-color: #283593;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+section {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+  background-color: #ebfcfc;
+  color: #333; 
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #333; 
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-basis: 75%;
+    padding: 50px;
+  }
+
+  section {
+    flex-basis: 50%;
+    margin-right: 20px;
+  }
+
+  aside {
+    flex-basis: 25%;
+    padding: 20px;
+  }
+}
+
+footer {
+  background-color: #283593; 
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+#profile .frame {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ebfcfc;
+  color: #333; 
+  line-height: 2;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  flex: 0 0 60%;
+  padding: 20px;
+}
+
+.right-column {
+  flex: 0 0 40%;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+  height: 500px;
+}
+
+.clock {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0.2; /* set opacity awal saat kursor tidak mengarah ke jam */
+  transition: opacity 0.3s ease; /* efek transisi untuk perubahan opacity */
+}
+
+.clock:hover {
+  opacity: 1; /* set opacity saat kursor mengarah ke jam */
+}
+
+.frame table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.frame td {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}   
+
+.frame ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.frame li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.frame li span.label {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  font-weight: bold;
+}
